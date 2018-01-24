@@ -80,7 +80,9 @@ namespace Lateetud.Utilities.VinqueryManager
         public string Execute()
         {
             using (var client = new WebClient())
+            {
                 return client.DownloadString(this.url);
+            } 
         }
     }
 }
