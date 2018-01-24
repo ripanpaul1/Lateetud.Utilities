@@ -5,3 +5,4 @@ E:\OfficeWork\Lateetud.Utilities\Lateetud.Utilities\bin\Debug\Lateetud.Utilities
 E:\OfficeWork\Lateetud.Utilities\Lateetud.Utilities\bin\Debug\Lateetud.Utilities.pdb
 E:\OfficeWork\Lateetud.Utilities\Lateetud.Utilities\obj\Debug\Lateetud.Utilities.dll
 E:\OfficeWork\Lateetud.Utilities\Lateetud.Utilities\obj\Debug\Lateetud.Utilities.pdb
+E:\OfficeWork\Lateetud.Utilities\Lateetud.Utilities\obj\Debug\Lateetud.Utilities.csprojResolveAssemblyReference.cache
