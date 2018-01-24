@@ -30,12 +30,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
@@ -46,10 +53,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExcelManager\BaseExcelManager.cs" />
+    <Compile Include="ExcelManager\ExcelManagerBywbstool8.cs" />
+    <Compile Include="ExcelManager\ExcelManagerByNetClasses.cs" />
+    <Compile Include="ExcelManager\wbstool8.ExcelReader\Cell.cs" />
+    <Compile Include="ExcelManager\wbstool8.ExcelReader\Row.cs" />
+    <Compile Include="ExcelManager\wbstool8.ExcelReader\SharedStrings.cs" />
+    <Compile Include="ExcelManager\wbstool8.ExcelReader\Workbook.cs" />
+    <Compile Include="ExcelManager\wbstool8.ExcelReader\Worksheet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StaticUtilities.cs" />
-    <Compile Include="Address\AddressByZip.cs" />
-    <Compile Include="Address\VerifyAddressZipPlus4.cs" />
+    <Compile Include="AddressManager\AddressByZip.cs" />
+    <Compile Include="AddressManager\VerifyAddressZipPlus4.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

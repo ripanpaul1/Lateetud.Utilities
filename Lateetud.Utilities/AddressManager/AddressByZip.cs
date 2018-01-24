@@ -1,6 +1,6 @@
 ﻿using System.Net;
 
-namespace Lateetud.Utilities.Address
+namespace Lateetud.Utilities.AddressManager
 {
     public class AddressByZipResult
     {

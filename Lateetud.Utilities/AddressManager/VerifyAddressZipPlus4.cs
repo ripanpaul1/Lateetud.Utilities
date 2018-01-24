@@ -1,7 +1,7 @@
 ﻿using System.Runtime.Serialization;
 using System.Net;
 
-namespace Lateetud.Utilities.Address
+namespace Lateetud.Utilities.AddressManager
 {
        
     [DataContract]
