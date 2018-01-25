@@ -65,7 +65,7 @@
     <Compile Include="StaticUtilities.cs" />
     <Compile Include="AddressManager\AddressByZip.cs" />
     <Compile Include="AddressManager\VerifyAddressZipPlus4.cs" />
-    <Compile Include="VinqueryManager\Vinquery.cs" />
+    <Compile Include="VinqueryManager\VINqueryService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
