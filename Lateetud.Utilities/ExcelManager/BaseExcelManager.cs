@@ -5,11 +5,8 @@ namespace Lateetud.Utilities.ExcelManager
 {
     public abstract class BaseExcelManager
     {
-        public abstract string ReadExcel(string file);
-        public virtual string ReadExcel(string file, string sheetname)
-        {
-            return "";
-        }
+        public abstract DataTable ReadExcel(string file);
+        public abstract DataTable ReadExcel(string file, string sheetname);
         public virtual string ConfigueConnectionString(string file)
         {
             if (Path.GetExtension(file).CompareTo(".xls") == 0)

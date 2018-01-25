@@ -54,7 +54,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ExcelManager\BaseExcelManager.cs" />
-    <Compile Include="ExcelManager\ExcelManagerBywbstool8.cs" />
     <Compile Include="ExcelManager\ExcelManagerByNetClasses.cs" />
     <Compile Include="ExcelManager\wbstool8.ExcelReader\Cell.cs" />
     <Compile Include="ExcelManager\wbstool8.ExcelReader\Row.cs" />
