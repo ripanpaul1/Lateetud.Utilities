@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enumerations.cs" />
     <Compile Include="ExcelManager\BaseExcelManager.cs" />
     <Compile Include="ExcelManager\ExcelManagerByNetClasses.cs" />
     <Compile Include="ExcelManager\wbstool8.ExcelReader\Cell.cs" />
@@ -65,6 +66,7 @@
     <Compile Include="AddressManager\AddressByZip.cs" />
     <Compile Include="AddressManager\VerifyAddressZipPlus4.cs" />
     <Compile Include="VinqueryManager\VINqueryService.cs" />
+    <Compile Include="XmlManager\XmlService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
