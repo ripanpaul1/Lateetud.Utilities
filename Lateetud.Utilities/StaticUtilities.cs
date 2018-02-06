@@ -67,5 +67,9 @@ namespace Lateetud.Utilities
             }
             return null;
         }
+        public static string Right(string value, int length)
+        {
+            return value.Substring(value.Length - length);
+        }
     }
 }

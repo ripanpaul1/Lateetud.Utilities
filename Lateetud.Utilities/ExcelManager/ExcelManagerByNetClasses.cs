@@ -19,6 +19,8 @@ namespace Lateetud.Utilities.ExcelManager
         {
             try
             {
+                string strsheetname = "Sheet1"; ;
+                if (!string.IsNullOrWhiteSpace(sheetname)) strsheetname = sheetname;
                 DataTable dtexcel = ConfigueConnection(file, sheetname);
                 if (dtexcel == null) return null;
                 return dtexcel;
