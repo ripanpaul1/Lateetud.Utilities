@@ -1,8 +1,14 @@
+E:\OfficeProjects\Lateetud.Utilities\Lateetud.Utilities\bin\Debug\Lateetud.Utilities.dll
+E:\OfficeProjects\Lateetud.Utilities\Lateetud.Utilities\bin\Debug\Lateetud.Utilities.pdb
+E:\OfficeProjects\Lateetud.Utilities\Lateetud.Utilities\bin\Debug\Newtonsoft.Json.dll
+E:\OfficeProjects\Lateetud.Utilities\Lateetud.Utilities\bin\Debug\Newtonsoft.Json.xml
+E:\OfficeProjects\Lateetud.Utilities\Lateetud.Utilities\obj\Debug\Lateetud.Utilities.csprojResolveAssemblyReference.cache
+E:\OfficeProjects\Lateetud.Utilities\Lateetud.Utilities\obj\Debug\Lateetud.Utilities.dll
+E:\OfficeProjects\Lateetud.Utilities\Lateetud.Utilities\obj\Debug\Lateetud.Utilities.pdb
 E:\OfficeWork\Lateetud.Utilities\Lateetud.Utilities\bin\Debug\Lateetud.Utilities.dll
 E:\OfficeWork\Lateetud.Utilities\Lateetud.Utilities\bin\Debug\Lateetud.Utilities.pdb
 E:\OfficeWork\Lateetud.Utilities\Lateetud.Utilities\bin\Debug\Newtonsoft.Json.dll
 E:\OfficeWork\Lateetud.Utilities\Lateetud.Utilities\bin\Debug\Newtonsoft.Json.xml
-E:\OfficeWork\Lateetud.Utilities\Lateetud.Utilities\obj\Debug\Lateetud.Utilities.csprojResolveAssemblyReference.cache
 E:\OfficeWork\Lateetud.Utilities\Lateetud.Utilities\obj\Debug\Lateetud.Utilities.csproj.CoreCompileInputs.cache
 E:\OfficeWork\Lateetud.Utilities\Lateetud.Utilities\obj\Debug\Lateetud.Utilities.dll
 E:\OfficeWork\Lateetud.Utilities\Lateetud.Utilities\obj\Debug\Lateetud.Utilities.pdb

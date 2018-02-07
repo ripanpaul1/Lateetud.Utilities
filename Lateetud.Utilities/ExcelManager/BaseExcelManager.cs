@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 using System.Data.OleDb;
 using System.IO;
 namespace Lateetud.Utilities.ExcelManager
@@ -26,7 +27,7 @@ namespace Lateetud.Utilities.ExcelManager
                         return dtexcel;
                     }
                 }
-                catch
+                catch(Exception err)
                 {
                     return null;
                 }
