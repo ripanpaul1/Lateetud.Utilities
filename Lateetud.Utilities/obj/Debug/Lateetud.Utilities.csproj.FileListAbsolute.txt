@@ -12,3 +12,4 @@ E:\OfficeWork\Lateetud.Utilities\Lateetud.Utilities\bin\Debug\Newtonsoft.Json.xm
 E:\OfficeWork\Lateetud.Utilities\Lateetud.Utilities\obj\Debug\Lateetud.Utilities.csproj.CoreCompileInputs.cache
 E:\OfficeWork\Lateetud.Utilities\Lateetud.Utilities\obj\Debug\Lateetud.Utilities.dll
 E:\OfficeWork\Lateetud.Utilities\Lateetud.Utilities\obj\Debug\Lateetud.Utilities.pdb
+E:\OfficeWork\Lateetud.Utilities\Lateetud.Utilities\obj\Debug\Lateetud.Utilities.csprojResolveAssemblyReference.cache

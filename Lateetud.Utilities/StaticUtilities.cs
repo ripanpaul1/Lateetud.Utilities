@@ -71,5 +71,9 @@ namespace Lateetud.Utilities
         {
             return value.Substring(value.Length - length);
         }
+        public static bool IsSubstringValueExist(string value, string SubstringValue)
+        {
+            return (value.IndexOf(SubstringValue) < 0 ? false : true);
+        }
     }
 }
