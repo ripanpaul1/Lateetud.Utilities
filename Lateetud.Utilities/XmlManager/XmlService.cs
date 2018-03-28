@@ -14,7 +14,7 @@ namespace Lateetud.Utilities.XmlManager
             try
             {
                 XmlDocument xDoc = new XmlDocument();
-                xDoc.LoadXml(XmlContent);
+                xDoc.LoadXml(new GeneralService().ReplaceXmlLimitations(XmlContent));
                 xDoc.Save(XmlPathWithFileName);
                 return true;
             }

@@ -71,5 +71,11 @@ namespace Lateetud.Utilities
         {
             if (!Directory.Exists(DirectoryPath)) Directory.Delete(DirectoryPath);
         }
+
+        public string ReplaceXmlLimitations(string data)
+        {
+            data = data.Replace("&", "and");
+            return data;
+        }
     }
 }
