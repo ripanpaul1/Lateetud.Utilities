@@ -13,3 +13,10 @@ E:\OfficeWork\Lateetud.Utilities\Lateetud.Utilities\obj\Debug\Lateetud.Utilities
 E:\OfficeWork\Lateetud.Utilities\Lateetud.Utilities\obj\Debug\Lateetud.Utilities.dll
 E:\OfficeWork\Lateetud.Utilities\Lateetud.Utilities\obj\Debug\Lateetud.Utilities.pdb
 E:\OfficeWork\Lateetud.Utilities\Lateetud.Utilities\obj\Debug\Lateetud.Utilities.csprojResolveAssemblyReference.cache
+E:\Repository\Lateetud.Utilities\Lateetud.Utilities\bin\Debug\Lateetud.Utilities.dll
+E:\Repository\Lateetud.Utilities\Lateetud.Utilities\bin\Debug\Lateetud.Utilities.pdb
+E:\Repository\Lateetud.Utilities\Lateetud.Utilities\bin\Debug\Newtonsoft.Json.dll
+E:\Repository\Lateetud.Utilities\Lateetud.Utilities\bin\Debug\Newtonsoft.Json.xml
+E:\Repository\Lateetud.Utilities\Lateetud.Utilities\obj\Debug\Lateetud.Utilities.csprojResolveAssemblyReference.cache
+E:\Repository\Lateetud.Utilities\Lateetud.Utilities\obj\Debug\Lateetud.Utilities.dll
+E:\Repository\Lateetud.Utilities\Lateetud.Utilities\obj\Debug\Lateetud.Utilities.pdb

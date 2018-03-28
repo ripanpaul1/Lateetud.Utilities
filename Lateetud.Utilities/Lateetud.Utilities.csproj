@@ -69,6 +69,7 @@
     <Compile Include="AddressManager\VerifyAddressZipPlus4.cs" />
     <Compile Include="VinqueryManager\VINqueryService.cs" />
     <Compile Include="XmlManager\XmlService.cs" />
+    <Compile Include="XmlManager\XMLUtility.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
