@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.IO.Compression;
 using System.Web;
 
 namespace Lateetud.Utilities
@@ -18,6 +19,10 @@ namespace Lateetud.Utilities
                 CreateDirectory(Path.Combine(DestinationPath, CurrDir));
                 foreach (var file in files)
                 {
+                    if (Path.GetExtension(file.FileName) == ".rar")
+                        continue;
+
+                    DateTime dtStart = DateTime.Now;
                     FileModel fileModel = new FileModel()
                     {
                         OriginalFileName = Path.GetFileName(file.FileName),
@@ -26,7 +31,36 @@ namespace Lateetud.Utilities
                         Status = PStatus.None
                     };
                     file.SaveAs(fileModel.FilePath);
-                    fileModels.Add(fileModel);
+
+                    if (Path.GetExtension(fileModel.FilePath) == ".rar" || Path.GetExtension(fileModel.FilePath) == ".zip")
+                    {
+                        using (var zipFile = ZipFile.OpenRead(fileModel.FilePath))
+                        {
+                            zipFile.ExtractToDirectory(Path.Combine(DestinationPath, CurrDir));
+                            string TheUploadedPath = Path.Combine(DestinationPath, CurrDir, Path.GetFileNameWithoutExtension(file.FileName));
+                            DirectoryInfo d = new DirectoryInfo(TheUploadedPath);
+                            FileInfo[] Files = d.GetFiles("*.xml");
+                            foreach (FileInfo fileInfo in Files)
+                            {
+                                FileModel fileModelXml = new FileModel()
+                                {
+                                    OriginalFileName = fileInfo.Name,
+                                    UploadedFileName = fileInfo.Name,
+                                    FilePath = fileInfo.FullName,
+                                    Status = PStatus.None
+                                };
+                                fileModels.Add(fileModelXml);
+                            }
+                        }
+                    }
+                    else
+                    {
+                        DateTime dtEnd = DateTime.Now;
+                        fileModel.UploadTimeSpan = dtEnd.Subtract(dtStart);
+                        fileModel.UploadTime = fileModel.UploadTimeSpan.Seconds.ToString("00") + ":" + fileModel.UploadTimeSpan.Milliseconds.ToString("0000");
+
+                        fileModels.Add(fileModel);
+                    }
                 }
             }
             return fileModels;
