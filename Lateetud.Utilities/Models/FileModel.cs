@@ -23,9 +23,11 @@ namespace Lateetud.Utilities.Models
         public string StatusText { get; set; }
 
         public TimeSpan UploadTimeSpan { get; set; }
-        public TimeSpan ExecutionTimeSpan { get; set; }
         public string UploadTime { get; set; }
+        public TimeSpan ExecutionTimeSpan { get; set; }
         public string ExecutionTime { get; set; }
+        public TimeSpan TotalExecutionTimeSpan { get; set; }
+        public string TotalExecutionTime { get; set; }
     }
     public class FileModelList
     {
@@ -34,4 +36,6 @@ namespace Lateetud.Utilities.Models
         public TimeSpan TotalProcessTimeSpan { get; set; }
         public string TotalProcessTime { get; set; }
     }
+
+    
 }

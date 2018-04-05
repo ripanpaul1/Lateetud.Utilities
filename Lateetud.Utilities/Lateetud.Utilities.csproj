@@ -63,6 +63,7 @@
     <Compile Include="ExcelManager\wbstool8.ExcelReader\Worksheet.cs" />
     <Compile Include="GeneralService.cs" />
     <Compile Include="Models\FileModel.cs" />
+    <Compile Include="Models\VMZipFile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RandomGenerator.cs" />
     <Compile Include="StaticUtilities.cs" />

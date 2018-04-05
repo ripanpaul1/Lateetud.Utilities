@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Lateetud.Utilities.Models;
+using System;
 using System.Configuration;
+using System.IO;
+using System.IO.Compression;
 using System.Net.Mail;
 using System.Web;
 using System.Web.UI;
@@ -67,6 +70,10 @@ namespace Lateetud.Utilities
             }
             return null;
         }
+        public static string Left(string value, int start,int length)
+        {
+            return value.Substring(start, length);
+        }
         public static string Right(string value, int length)
         {
             return value.Substring(value.Length - length);
@@ -74,6 +81,22 @@ namespace Lateetud.Utilities
         public static bool IsSubstringValueExist(string value, string SubstringValue)
         {
             return (value.IndexOf(SubstringValue) < 0 ? false : true);
+        }
+        public static VMZipFile ZipFileInfo(ZipArchive zipArchive)
+        {
+            if (zipArchive == null) return null;
+            if (zipArchive.Entries.Count == 0) return null;
+            VMZipFile vMZipFile = new VMZipFile();
+            vMZipFile.ExtractedFolderName = null;
+            for (int i = 0; i < zipArchive.Entries.Count; i++)
+            {
+                if (string.IsNullOrWhiteSpace(Path.GetExtension(zipArchive.Entries[i].FullName)))
+                {
+                    vMZipFile.ExtractedFolderName = StaticUtilities.Left(zipArchive.Entries[i].FullName, 0, zipArchive.Entries[i].FullName.Length - 1);
+                    break;
+                }
+            }
+            return vMZipFile;
         }
     }
 }
