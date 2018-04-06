@@ -11,6 +11,9 @@ namespace Lateetud.Utilities
 {
     public static class StaticUtilities
     {
+        public static PTime ProcessTimeFormat { get; set; }
+
+
         public static void SendErrorNotification(string Subject, string Body, Exception Ex,HttpRequest TheRequest)
         {
             try

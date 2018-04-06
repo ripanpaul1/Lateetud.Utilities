@@ -35,7 +35,10 @@ namespace Lateetud.Utilities
                         };
                         DateTime dtEnd = DateTime.Now;
                         TheFileModelRar.UploadTimeSpan = dtEnd.Subtract(dtStart);
-                        TheFileModelRar.UploadTime = TheFileModelRar.UploadTimeSpan.Seconds.ToString("00") + ":" + TheFileModelRar.UploadTimeSpan.Milliseconds.ToString("000");
+                        if (StaticUtilities.ProcessTimeFormat == PTime.Ticks)
+                            TheFileModelRar.UploadTime = TheFileModelRar.UploadTimeSpan.Seconds.ToString("00") + ":" + TheFileModelRar.UploadTimeSpan.Ticks.ToString();
+                        else if (StaticUtilities.ProcessTimeFormat == PTime.Milliseconds)
+                            TheFileModelRar.UploadTime = TheFileModelRar.UploadTimeSpan.Seconds.ToString("00") + ":" + TheFileModelRar.UploadTimeSpan.Milliseconds.ToString("000");
                         fileModels.Add(TheFileModelRar);
                         continue;
                     }
@@ -54,7 +57,10 @@ namespace Lateetud.Utilities
                         };
                         DateTime dtEnd = DateTime.Now;
                         TheFileModelXml.UploadTimeSpan = dtEnd.Subtract(dtStart);
-                        TheFileModelXml.UploadTime = TheFileModelXml.UploadTimeSpan.Seconds.ToString("00") + ":" + TheFileModelXml.UploadTimeSpan.Milliseconds.ToString("000");
+                        if (StaticUtilities.ProcessTimeFormat == PTime.Ticks)
+                            TheFileModelXml.UploadTime = TheFileModelXml.UploadTimeSpan.Seconds.ToString("00") + ":" + TheFileModelXml.UploadTimeSpan.Ticks.ToString();
+                        else if (StaticUtilities.ProcessTimeFormat == PTime.Milliseconds)
+                            TheFileModelXml.UploadTime = TheFileModelXml.UploadTimeSpan.Seconds.ToString("00") + ":" + TheFileModelXml.UploadTimeSpan.Milliseconds.ToString("000");
                         fileModels.Add(TheFileModelXml);
                     }
                     else if (Path.GetExtension(file.FileName).Contains(".zip"))
@@ -77,7 +83,10 @@ namespace Lateetud.Utilities
                                 };
                                 DateTime dtEnd = DateTime.Now;
                                 TheFileModelZip1.UploadTimeSpan = dtEnd.Subtract(dtStart);
-                                TheFileModelZip1.UploadTime = TheFileModelZip1.UploadTimeSpan.Seconds.ToString("00") + ":" + TheFileModelZip1.UploadTimeSpan.Milliseconds.ToString("000");
+                                if (StaticUtilities.ProcessTimeFormat == PTime.Ticks)
+                                    TheFileModelZip1.UploadTime = TheFileModelZip1.UploadTimeSpan.Seconds.ToString("00") + ":" + TheFileModelZip1.UploadTimeSpan.Ticks.ToString();
+                                else if (StaticUtilities.ProcessTimeFormat == PTime.Milliseconds)
+                                    TheFileModelZip1.UploadTime = TheFileModelZip1.UploadTimeSpan.Seconds.ToString("00") + ":" + TheFileModelZip1.UploadTimeSpan.Milliseconds.ToString("000");
                                 fileModels.Add(TheFileModelZip1);
                                 continue;
                             }
@@ -102,7 +111,10 @@ namespace Lateetud.Utilities
                                 };
                                 DateTime dtEnd = DateTime.Now;
                                 TheFileModelFileInfo1.UploadTimeSpan = dtEnd.Subtract(dtStart);
-                                TheFileModelFileInfo1.UploadTime = TheFileModelFileInfo1.UploadTimeSpan.Seconds.ToString("00") + ":" + TheFileModelFileInfo1.UploadTimeSpan.Milliseconds.ToString("000");
+                                if (StaticUtilities.ProcessTimeFormat == PTime.Ticks)
+                                    TheFileModelFileInfo1.UploadTime = TheFileModelFileInfo1.UploadTimeSpan.Seconds.ToString("00") + ":" + TheFileModelFileInfo1.UploadTimeSpan.Ticks.ToString();
+                                else if (StaticUtilities.ProcessTimeFormat == PTime.Milliseconds)
+                                    TheFileModelFileInfo1.UploadTime = TheFileModelFileInfo1.UploadTimeSpan.Seconds.ToString("00") + ":" + TheFileModelFileInfo1.UploadTimeSpan.Milliseconds.ToString("000");
                                 fileModels.Add(TheFileModelFileInfo1);
                                 continue;
                             }
@@ -119,7 +131,10 @@ namespace Lateetud.Utilities
                                 };
                                 DateTime dtEnd = DateTime.Now;
                                 TheFileModelFileInfo2.UploadTimeSpan = dtEnd.Subtract(dtStart);
-                                TheFileModelFileInfo2.UploadTime = TheFileModelFileInfo2.UploadTimeSpan.Seconds.ToString("00") + ":" + TheFileModelFileInfo2.UploadTimeSpan.Milliseconds.ToString("000");
+                                if (StaticUtilities.ProcessTimeFormat == PTime.Ticks)
+                                    TheFileModelFileInfo2.UploadTime = TheFileModelFileInfo2.UploadTimeSpan.Seconds.ToString("00") + ":" + TheFileModelFileInfo2.UploadTimeSpan.Ticks.ToString();
+                                else if (StaticUtilities.ProcessTimeFormat == PTime.Milliseconds)
+                                    TheFileModelFileInfo2.UploadTime = TheFileModelFileInfo2.UploadTimeSpan.Seconds.ToString("00") + ":" + TheFileModelFileInfo2.UploadTimeSpan.Milliseconds.ToString("000");
                                 fileModels.Add(TheFileModelFileInfo2);
                                 continue;
                             }
@@ -133,13 +148,16 @@ namespace Lateetud.Utilities
                                 {
                                     OriginalFileName = TheFile.Name,
                                     UploadedFileName = TheFile.Name,
-                                    DirectoryPath = TheExtractedPath,
+                                    DirectoryPath = TheDirectoryPath,
                                     FilePath = TheFile.FullName,
                                     Status = PStatus.None
                                 };
                                 DateTime dtEnd = DateTime.Now;
                                 fileModelZip.UploadTimeSpan = TheZipUploadTime + dtEnd.Subtract(dtStartZip);
-                                fileModelZip.UploadTime = fileModelZip.UploadTimeSpan.Seconds.ToString("00") + ":" + fileModelZip.UploadTimeSpan.Milliseconds.ToString("000");
+                                if (StaticUtilities.ProcessTimeFormat == PTime.Ticks)
+                                    fileModelZip.UploadTime = fileModelZip.UploadTimeSpan.Seconds.ToString("00") + ":" + fileModelZip.UploadTimeSpan.Ticks.ToString();
+                                else if (StaticUtilities.ProcessTimeFormat == PTime.Milliseconds)
+                                    fileModelZip.UploadTime = fileModelZip.UploadTimeSpan.Seconds.ToString("00") + ":" + fileModelZip.UploadTimeSpan.Milliseconds.ToString("000");
                                 fileModels.Add(fileModelZip);
                             }
                         }
@@ -176,7 +194,10 @@ namespace Lateetud.Utilities
                         };
                         DateTime dtEnd = DateTime.Now;
                         TheFileModelRar.UploadTimeSpan = dtEnd.Subtract(dtStart);
-                        TheFileModelRar.UploadTime = TheFileModelRar.UploadTimeSpan.Seconds.ToString("00") + ":" + TheFileModelRar.UploadTimeSpan.Milliseconds.ToString("000");
+                        if (StaticUtilities.ProcessTimeFormat == PTime.Ticks)
+                            TheFileModelRar.UploadTime = TheFileModelRar.UploadTimeSpan.Seconds.ToString("00") + ":" + TheFileModelRar.UploadTimeSpan.Ticks.ToString();
+                        else if (StaticUtilities.ProcessTimeFormat == PTime.Milliseconds)
+                            TheFileModelRar.UploadTime = TheFileModelRar.UploadTimeSpan.Seconds.ToString("00") + ":" + TheFileModelRar.UploadTimeSpan.Milliseconds.ToString("000");
                         fileModels.Add(TheFileModelRar);
                         continue;
                     }
@@ -195,7 +216,10 @@ namespace Lateetud.Utilities
                         };
                         DateTime dtEnd = DateTime.Now;
                         TheFileModelXml.UploadTimeSpan = dtEnd.Subtract(dtStart);
-                        TheFileModelXml.UploadTime = TheFileModelXml.UploadTimeSpan.Seconds.ToString("00") + ":" + TheFileModelXml.UploadTimeSpan.Milliseconds.ToString("000");
+                        if (StaticUtilities.ProcessTimeFormat == PTime.Ticks)
+                            TheFileModelXml.UploadTime = TheFileModelXml.UploadTimeSpan.Seconds.ToString("00") + ":" + TheFileModelXml.UploadTimeSpan.Ticks.ToString();
+                        else if (StaticUtilities.ProcessTimeFormat == PTime.Milliseconds)
+                            TheFileModelXml.UploadTime = TheFileModelXml.UploadTimeSpan.Seconds.ToString("00") + ":" + TheFileModelXml.UploadTimeSpan.Milliseconds.ToString("000");
                         fileModels.Add(TheFileModelXml);
                     }
                     else if (Path.GetExtension(file.FileName).Contains(".zip"))
@@ -218,7 +242,10 @@ namespace Lateetud.Utilities
                                 };
                                 DateTime dtEnd = DateTime.Now;
                                 TheFileModelZip1.UploadTimeSpan = dtEnd.Subtract(dtStart);
-                                TheFileModelZip1.UploadTime = TheFileModelZip1.UploadTimeSpan.Seconds.ToString("00") + ":" + TheFileModelZip1.UploadTimeSpan.Milliseconds.ToString("000");
+                                if (StaticUtilities.ProcessTimeFormat == PTime.Ticks)
+                                    TheFileModelZip1.UploadTime = TheFileModelZip1.UploadTimeSpan.Seconds.ToString("00") + ":" + TheFileModelZip1.UploadTimeSpan.Ticks.ToString();
+                                else if (StaticUtilities.ProcessTimeFormat == PTime.Milliseconds)
+                                    TheFileModelZip1.UploadTime = TheFileModelZip1.UploadTimeSpan.Seconds.ToString("00") + ":" + TheFileModelZip1.UploadTimeSpan.Milliseconds.ToString("000");
                                 fileModels.Add(TheFileModelZip1);
                                 continue;
                             }
@@ -243,7 +270,10 @@ namespace Lateetud.Utilities
                                 };
                                 DateTime dtEnd = DateTime.Now;
                                 TheFileModelFileInfo1.UploadTimeSpan = dtEnd.Subtract(dtStart);
-                                TheFileModelFileInfo1.UploadTime = TheFileModelFileInfo1.UploadTimeSpan.Seconds.ToString("00") + ":" + TheFileModelFileInfo1.UploadTimeSpan.Milliseconds.ToString("000");
+                                if (StaticUtilities.ProcessTimeFormat == PTime.Ticks)
+                                    TheFileModelFileInfo1.UploadTime = TheFileModelFileInfo1.UploadTimeSpan.Seconds.ToString("00") + ":" + TheFileModelFileInfo1.UploadTimeSpan.Ticks.ToString();
+                                else if (StaticUtilities.ProcessTimeFormat == PTime.Milliseconds)
+                                    TheFileModelFileInfo1.UploadTime = TheFileModelFileInfo1.UploadTimeSpan.Seconds.ToString("00") + ":" + TheFileModelFileInfo1.UploadTimeSpan.Milliseconds.ToString("000");
                                 fileModels.Add(TheFileModelFileInfo1);
                                 continue;
                             }
@@ -260,7 +290,10 @@ namespace Lateetud.Utilities
                                 };
                                 DateTime dtEnd = DateTime.Now;
                                 TheFileModelFileInfo2.UploadTimeSpan = dtEnd.Subtract(dtStart);
-                                TheFileModelFileInfo2.UploadTime = TheFileModelFileInfo2.UploadTimeSpan.Seconds.ToString("00") + ":" + TheFileModelFileInfo2.UploadTimeSpan.Milliseconds.ToString("000");
+                                if (StaticUtilities.ProcessTimeFormat == PTime.Ticks)
+                                    TheFileModelFileInfo2.UploadTime = TheFileModelFileInfo2.UploadTimeSpan.Seconds.ToString("00") + ":" + TheFileModelFileInfo2.UploadTimeSpan.Ticks.ToString();
+                                else if (StaticUtilities.ProcessTimeFormat == PTime.Milliseconds)
+                                    TheFileModelFileInfo2.UploadTime = TheFileModelFileInfo2.UploadTimeSpan.Seconds.ToString("00") + ":" + TheFileModelFileInfo2.UploadTimeSpan.Milliseconds.ToString("000");
                                 fileModels.Add(TheFileModelFileInfo2);
                                 continue;
                             }
@@ -274,13 +307,16 @@ namespace Lateetud.Utilities
                                 {
                                     OriginalFileName = TheFile.Name,
                                     UploadedFileName = TheFile.Name,
-                                    DirectoryPath = TheExtractedPath,
+                                    DirectoryPath = TheDirectoryPath,
                                     FilePath = TheFile.FullName,
                                     Status = PStatus.None
                                 };
                                 DateTime dtEnd = DateTime.Now;
                                 fileModelZip.UploadTimeSpan = TheZipUploadTime + dtEnd.Subtract(dtStartZip);
-                                fileModelZip.UploadTime = fileModelZip.UploadTimeSpan.Seconds.ToString("00") + ":" + fileModelZip.UploadTimeSpan.Milliseconds.ToString("000");
+                                if (StaticUtilities.ProcessTimeFormat == PTime.Ticks)
+                                    fileModelZip.UploadTime = fileModelZip.UploadTimeSpan.Seconds.ToString("00") + ":" + fileModelZip.UploadTimeSpan.Ticks.ToString();
+                                else if (StaticUtilities.ProcessTimeFormat == PTime.Milliseconds)
+                                    fileModelZip.UploadTime = fileModelZip.UploadTimeSpan.Seconds.ToString("00") + ":" + fileModelZip.UploadTimeSpan.Milliseconds.ToString("000");
                                 fileModels.Add(fileModelZip);
                             }
                         }
@@ -297,12 +333,14 @@ namespace Lateetud.Utilities
 
         public void CreateDirectory(string DirectoryPath)
         {
+            if (string.IsNullOrWhiteSpace(DirectoryPath)) return;
             if (!Directory.Exists(DirectoryPath)) Directory.CreateDirectory(DirectoryPath);
         }
 
         public void DeleteDirectory(string DirectoryPath)
         {
-            if (!Directory.Exists(DirectoryPath)) Directory.Delete(DirectoryPath);
+            if (string.IsNullOrWhiteSpace(DirectoryPath)) return;
+            if (Directory.Exists(DirectoryPath)) Directory.Delete(DirectoryPath, true);
         }
 
         public string ReplaceXmlLimitations(string data)

@@ -13,4 +13,10 @@ namespace Lateetud.Utilities
         Failed = 2,
         Error = 3
     }
+
+    public enum PTime
+    {
+        Ticks = 1,
+        Milliseconds = 2
+    }
 }
