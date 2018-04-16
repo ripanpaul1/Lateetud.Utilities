@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
+using System.Text;
 using System.Web;
 
 namespace Lateetud.Utilities
@@ -347,6 +348,26 @@ namespace Lateetud.Utilities
         {
             data = data.Replace("&", "and");
             return data;
+        }
+
+        public bool IsCreateTextFile(string content, string DirectoryPath, string fileName)
+        {
+            if (string.IsNullOrWhiteSpace(DirectoryPath)) return false;
+            if (string.IsNullOrWhiteSpace(fileName)) return false;
+            try
+            {
+                if (!Directory.Exists(DirectoryPath)) new GeneralService().CreateDirectory(DirectoryPath);
+                using (FileStream fs = File.Create(Path.Combine(DirectoryPath, fileName)))
+                {
+                    Byte[] aura = new UTF8Encoding(true).GetBytes(content);
+                    fs.Write(aura, 0, aura.Length);
+                }
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }
